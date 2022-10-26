@@ -15,6 +15,7 @@
 
 /* --ЗАГАЛЬНІ ЗМІННІ-- */
 
+/* переважаючі характеристики сторінки */
 body {
     background: var(--hero-color);
     color: var(--title-text-color);
@@ -209,6 +210,7 @@ margin-right: 50px;
 .button:hover, .button:focus {
     background: var(--buttun-color-active);
 }
+
 /* Секції */
 
 .section-title {
@@ -228,17 +230,12 @@ margin-right: 50px;
 }
 
 .feature-list {
-    display: flex;    
-}
-
-.feature-list ul {
-    display: block;
-    align-items: center;
+    display: flex;
+    gap: 30px;
 }
 
 .feature-list li {
-    width: 270px;
-    margin-right: 50;
+    flex-basis: calc((100% - 90px) / 4);
 }
 
 .feature-title {
@@ -276,11 +273,11 @@ margin-right: 50px;
 .user-list {
     display: flex;
     margin-top: 50px;
-    justify-content: center;
 }
 
 .user-title {
     color:var(--primary-text-color);
+    margin-top: 30px;
 
     font-weight: 500;
     font-size: 16px;
@@ -291,12 +288,24 @@ margin-right: 50px;
 
 .user-desc {
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.user-signature {
+    background: var(--hero-color);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .user-list li {
+    display: flex;
+    flex-direction: column;
     width: 270px;
     margin-right: 30px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
+
 .user-list li:last-child {
     margin-right: 0px;
 }
@@ -358,7 +367,6 @@ margin-right: 50px;
     border-right:1px solid var(--portfolio-border);
     border-bottom:1px solid var(--portfolio-border);
     border-left: 1px solid var(--portfolio-border);
-    /* border: 1px solid var(--portfolio-border); */
 }
 
 .projects li:nth-child(3n+3) {
