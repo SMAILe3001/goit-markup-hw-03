@@ -223,8 +223,7 @@ margin-right: 50px;
 
 /* Особливості */
 
-.feature-section {
-    padding-top: 94px;
+.section {
     padding-bottom: 94px;
 }
 
@@ -300,6 +299,10 @@ margin-right: 50px;
 }
 .user-list li:last-child {
     margin-right: 0px;
+}
+
+.feature-section {
+    padding-top: 94px;
 }
 
 /* -- ТІЛО ПОРТФОЛіО-- */
