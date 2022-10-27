@@ -1,19 +1,25 @@
 /* --КОЛЬОРИ САЙТУ-- */
 :root {
-    --primary-text-color: #212121;
-    --title-text-color: #757575;
-    --accent-color: #2196F3;
-    --hero-color: #FFFFFF;
-    --portfolio-button: #F5F4FA;
-    --hero-fon: #2F303A;
     --logo-color: #000000;
+    --primary-text-color: #212121;
+    --hero-fon: #2F303A;
+    --title-text-color: #757575;
     --contact-color: rgba(255, 255, 255, 0.6);
-    --buttun-color-active: #188CE8;
-    --portfolio-border: #EEEEEE;
+    --portfolio-button: #F5F4FA;
     --heder-border: #ECECEC;
+    --portfolio-border: #EEEEEE;
+    --hero-color: #FFFFFF;
+    --accent-color: #2196F3;
+    --buttun-color-active: #188CE8;
 }
 
 /* --ЗАГАЛЬНІ ЗМІННІ-- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 /* переважаючі характеристики сторінки */
 body {
@@ -23,7 +29,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.7143;
 }
 
 /* Видалення крапок списку */
@@ -46,6 +52,16 @@ body {
     width: 1px;
     height: 1px;
     margin: -1px;
+
+    /* варіант від ментора */
+    /* position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0); */
 }
 
 
@@ -53,7 +69,7 @@ body {
 .container {
     margin-left: auto;
     margin-right: auto;
-    width: 1170px;
+    width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     
@@ -83,9 +99,8 @@ h1, h2, h3, h4, p {
     margin-right: 93px;
 
     font-family: 'Raleway';
-    font-weight: 700;
     font-size: 26px;
-    line-height: 1.2;
+    line-height: 1.1923;
     letter-spacing: 0.03em;
 }
 
@@ -95,10 +110,13 @@ h1, h2, h3, h4, p {
 
 /* Навігація сайту */
 
+.page-header {
+    border-bottom: 1px solid var(--heder-border);
+}
+
 .header-nav {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--heder-border);
 }
 
 .site-nav {
@@ -115,10 +133,9 @@ margin-right: 50px;
     padding-bottom: 32px;    
     color: var(--primary-text-color);
     
-
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.14;
+    line-height: 1.1429;
     letter-spacing: 0.02em;
 }
 
@@ -127,10 +144,9 @@ margin-right: 50px;
 }
 
 .site-nav .link:hover, 
-.site-nav .link:focus {
-    color: var(--accent-color);
-}
-
+.site-nav .link:focus,
+.adress-nav .link:hover,
+.adress-nav .link:focus,
 .link.current {
     color: var(--accent-color);
 }
@@ -149,17 +165,12 @@ margin-right: 50px;
 
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.17;
+    line-height: 1.1429;
     letter-spacing: 0.02em;
 }
 
 .adress-nav li:first-child {
     margin-left: 0px;
-}
-
-.adress-nav .link:hover,
-.adress-nav .link:focus {
-    color: var(--accent-color);
 }
 
 /* --ТІЛО ОСНОВНОЇ СТОРІНКИ-- */
@@ -169,8 +180,8 @@ margin-right: 50px;
 .hero {
     background: var(--hero-fon);
     text-align: center;
-    height: 400px;
     padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 .hero-title {
@@ -178,7 +189,7 @@ margin-right: 50px;
     width: 696px;
     font-weight: 900;
     font-size: 44px;
-    line-height: 1.36;
+    line-height: 1.3636;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -189,17 +200,13 @@ margin-right: 50px;
 .button {
     color: var(--hero-color);
     background: var(--accent-color);
-
     cursor: pointer;
-
     font-weight: 700;
     font-size: 16px;
-    line-height: 1.88;
+    line-height: 1.875;
     text-align: center;
     letter-spacing: 0.06em;
-
-    padding: 10px 30px;
-
+    padding: 10px 32px;
     margin-top: 30px;
     border: 0px;
     border-radius: 4px;
@@ -216,9 +223,8 @@ margin-right: 50px;
 .section-title {
     color: var(--primary-text-color);
 
-    font-weight: 700;
     font-size: 36px;
-    line-height: 1.16;
+    line-height: 1.1667;
     text-align: center;
     letter-spacing: 0.03em;
 }
@@ -226,7 +232,7 @@ margin-right: 50px;
 /* Особливості */
 
 .section {
-    padding-bottom: 94px;
+    padding-top: 94px;
 }
 
 .feature-list {
@@ -240,10 +246,10 @@ margin-right: 50px;
 
 .feature-title {
     color: var(--primary-text-color);
+    margin-bottom: 10px;
 
-    font-weight: 700;
     font-size: 14px;
-    line-height: 1.14;
+    line-height: 1.1721;
     letter-spacing: 0.03em;
     text-transform: uppercase;
 }
@@ -281,7 +287,7 @@ margin-right: 50px;
 
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.19;
+    line-height: 1.1875;
     text-align: center;
     letter-spacing: 0.03em;
 }
@@ -311,7 +317,7 @@ margin-right: 50px;
 }
 
 .feature-section {
-    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 /* -- ТІЛО ПОРТФОЛіО-- */
@@ -319,11 +325,6 @@ margin-right: 50px;
 .filters {
     display: flex;
     justify-content: center;
-}
-
-.filters-section {
-    padding-top: 50px;
-    padding-bottom: 94px;
 }
 
 .filters-button {
@@ -334,14 +335,14 @@ margin-right: 50px;
 
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.62;
+    line-height: 1.625;
     text-align: center;
     letter-spacing: 0.03em;
 
-    margin-right: 8px;
+    margin: 0px 4px;
     border-radius: 4px;
     border: 0px;
-    padding: 6px 25px;
+    padding: 6px 22px;
 }
 
 .filters-button:hover,
@@ -364,6 +365,8 @@ margin-right: 50px;
 }
 
 .projects-border {
+    padding: 20px 24px;
+
     border-right:1px solid var(--portfolio-border);
     border-bottom:1px solid var(--portfolio-border);
     border-left: 1px solid var(--portfolio-border);
@@ -380,44 +383,35 @@ margin-right: 50px;
 .projects-title {
     color: var(--primary-text-color);
 
-    font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-
-    margin-top: 20px;
-    margin-left: 24px;
 }
 
 .projects-desc {
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.88;
+    line-height: 1.875;
     letter-spacing: 0.03em;
 
     margin-top: 4px;
-    margin-left: 24px;
-    margin-bottom: 20px;
 }
 
 /* --ФУТЕР-- */
 
 .footer {
-    padding-top: 52px;
-    padding-bottom: 50px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     background: var(--hero-fon);
 }
 
 .address {
     margin-top: 20px;
+    font-style: normal;
 }
 
 .logo-white {
     color: var(--hero-color);
-}
-
-.address {
-    font-style: normal;
 }
 
 .address-map {    
@@ -439,4 +433,8 @@ margin-right: 50px;
 
 .address-list li:last-child {
     margin-bottom: 0px;
+}
+
+.footer .logo {
+    margin-right: 0px;
 }
