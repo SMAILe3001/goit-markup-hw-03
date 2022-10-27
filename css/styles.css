@@ -54,6 +54,7 @@ body {
     margin: -1px;
 
     /* варіант від ментора */
+    
     /* position: absolute;
     width: 1px;
     height: 1px;
@@ -62,6 +63,18 @@ body {
     overflow: hidden;
     border: 0;
     clip: rect(0 0 0 0); */
+
+    /* border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important; */
 }
 
 
@@ -378,7 +391,7 @@ margin-right: 50px;
 
 .projects li:nth-last-child(-n+3) {
     margin-bottom: 3px;
-}  
+}   
 
 .projects-title {
     color: var(--primary-text-color);
